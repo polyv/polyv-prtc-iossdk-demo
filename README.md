@@ -140,8 +140,8 @@ Add Files to "Your targets" -> [`pwd`/PRTCSDK_iOS/Framework/PRTCSDK_iOS.framewor
     self.engine.isAutoSubscribe = YES;//加入房间后将自动订阅远端音视频 默认为YES
     self.engine.isOnlyAudio = NO;//将启用纯音频模式 默认为NO
     self.engine.isDebug = NO;//是否开启日志
-    self.engine.videoProfile = UCloudRtcEngine_VideoProfile_360P_1;//设置视频分辨率
-    self.engine.streamProfile = UCloudRtcEngine_StreamProfileAll;//设置流权限
+    self.engine.videoProfile = PRTCEngine_VideoProfile_360P_1;//设置视频分辨率
+    self.engine.streamProfile = PRTCEngine_StreamProfileAll;//设置流权限
     self.engine.isTrackVolume = YES// 开启音量检测，默认为NO
     
 
@@ -173,7 +173,7 @@ Add Files to "Your targets" -> [`pwd`/PRTCSDK_iOS/Framework/PRTCSDK_iOS.framewor
 * 发布过程中可以监听以下事件获取发布状态，根据状态调用渲染或其他接口即可。
 
         //objective-c
-        - (void)PRTCEngine:(UCloudRtcEngine *)manager didChangePublishState:(PRTCEnginePublishState)publishState {
+        - (void)PRTCEngine:(PRTCEngine *)manager didChangePublishState:(PRTCEnginePublishState)publishState {
             switch (publishState) {
                         case PRTCEnginePublishStateUnPublish:
                             self.isConnected = NO;
@@ -209,7 +209,7 @@ Add Files to "Your targets" -> [`pwd`/PRTCSDK_iOS/Framework/PRTCSDK_iOS.framewor
                 }
                 
         //swift
-        func PRTCEngine(_ manager: UCloudRtcEngine, didChange publishState: PRTCEnginePublishState) {
+        func PRTCEngine(_ manager: PRTCEngine, didChange publishState: PRTCEnginePublishState) {
             switch publishState {
                 case .unPublish:
                     self.isConnected = false
@@ -251,12 +251,12 @@ Add Files to "Your targets" -> [`pwd`/PRTCSDK_iOS/Framework/PRTCSDK_iOS.framewor
 * 订阅成功，在回调事件中调用渲染接口即可。
 
         //objective-c
-        -(void)PRTCEngine:(UCloudRtcEngine *)channel didSubscribe:(UCloudRtcStream *)stream{
+        -(void)PRTCEngine:(PRTCEngine *)channel didSubscribe:(PRTCStream *)stream{
             [self reloadVideos];
         }
         
         //swift
-        func PRTCRtcEngine(_ channel: UCloudRtcEngine, didSubscribe stream: UCloudRtcStream) {
+        func PRTCRtcEngine(_ channel: PRTCEngine, didSubscribe stream: PRTCStream) {
             self.reloadVideos()
         }
 ## 5.7 取消订阅远程流
@@ -275,13 +275,13 @@ Add Files to "Your targets" -> [`pwd`/PRTCSDK_iOS/Framework/PRTCSDK_iOS.framewor
         recordConfig.mainviewid = userId;  //主窗口位置用户id
         recordConfig.mimetype = 3;         //录制类型  1 音频 2 视频 3 音频+视频
         recordConfig.mainviewmt = 1;       //主窗口的媒体类型 1 摄像头 2 桌面
-        recordConfig.bucket = @"urtc-test";//存储地址的名称
+        recordConfig.bucket = @"prtc-test";//存储地址的名称
         recordConfig.region = @"cn-bj";    //所属的region
         recordConfig.watermarkpos = 1;     //水印的位置
         recordConfig.width = 360;          //录制视频的宽
         recordConfig.height = 480;         //录制视频的高
         recordConfig.isaverage = YES;      //是否均分
-        recordConfig.waterurl = @"http://urtc-living-test.cn-bj.ufileos.com/test.png";//watertype 2时代表图片水印url 、watertype 3代表水印文字
+        recordConfig.waterurl = @"http://prtc-living-test.cn-bj.ufileos.com/test.png";//watertype 2时代表图片水印url 、watertype 3代表水印文字
         recordConfig.watertype = 1;        //1 (时间水印) 、 2 (图片水印) 、 3（文字水印)
         recordConfig.wtemplate = 9;        //模板
         [self.engine startRecord:recordConfig];   
@@ -291,13 +291,13 @@ Add Files to "Your targets" -> [`pwd`/PRTCSDK_iOS/Framework/PRTCSDK_iOS.framewor
         recordConfig.mainviewid = userId;   //主窗口位置用户id
         recordConfig.mimetype = 3;          //录制类型  1 音频 2 视频 3 音频+视频
         recordConfig.mainviewmt = 1;        //主窗口的媒体类型 1 摄像头 2 桌面
-        recordConfig.bucket = "urtc-test";  //存储地址的名称
+        recordConfig.bucket = "prtc-test";  //存储地址的名称
         recordConfig.region = "cn-bj";      //所属的region
         recordConfig.watermarkpos = 1;      //水印的位置
         recordConfig.width = 360;           //录制视频的宽
         recordConfig.height = 480;          //录制视频的高
         recordConfig.isaverage = YES;       //是否均分
-        recordConfig.waterurl = @"http://urtc-living-test.cn-bj.ufileos.com/test.png";//watertype 2时代表图片水印url 、watertype 3代表水印文字
+        recordConfig.waterurl = @"http://prtc-living-test.cn-bj.ufileos.com/test.png";//watertype 2时代表图片水印url 、watertype 3代表水印文字
         recordConfig.watertype = 1;         //1 (时间水印) 、 2 (图片水印) 、 3（文字水印)
         recordConfig.wtemplate = 9;         //模板
         self.engine?.startRecord(recordConfig)
@@ -305,12 +305,12 @@ Add Files to "Your targets" -> [`pwd`/PRTCSDK_iOS/Framework/PRTCSDK_iOS.framewor
 * 视频录制开始的回调方法会包含自动生成的视频录制文件存放地址，如下方式获取：
 
         //objective-c
-        -(void)PRTCEngine:(UCloudRtcEngine *)manager startRecord:(NSDictionary *)recordResponse{
+        -(void)PRTCEngine:(PRTCEngine *)manager startRecord:(NSDictionary *)recordResponse{
             [self.view makeToast:[NSString stringWithFormat:@"视频录制文件:%@",recordResponse[@"FileName"]] duration:3.0     position:CSToastPositionCenter];
         }
 
         //swift
-        func PRTCEngine(_ manager: UCloudRtcEngine, startRecord recordResponse: [AnyHashable : Any]) {
+        func PRTCEngine(_ manager: PRTCEngine, startRecord recordResponse: [AnyHashable : Any]) {
             CBToast.showToastAction(message: NSString(format: "视频录制文件:%@", recordResponse["FileName"] as! CVarArg))
         }  
 

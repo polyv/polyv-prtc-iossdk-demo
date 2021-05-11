@@ -14,9 +14,11 @@
 
 #import <PRTCSDK_iOS/PRTCSDK_iOS.h>
 
+#error [获取帐号配置信息 APPID APPKEY]
+
 //线上
-#define APP_ID @"URtc-h4r1txxy"
-#define APP_KEY @"9129304dbf8c5c4bf68d70824462409f"
+#define APP_ID @""
+#define APP_KEY @""
 
 
 #define TOKEN @""
@@ -74,7 +76,7 @@
 
 - (void)setupUI {
     // 用户ID
-    _userTf.text = [NSString stringWithFormat:@"ios_%d",arc4random()%1000];
+    _userTf.text = [NSString stringWithFormat:@"iOS_%d",arc4random()%1000];
     
     // 设置leftView
     [_userTf setLeftImageViewWithName:@"user"];

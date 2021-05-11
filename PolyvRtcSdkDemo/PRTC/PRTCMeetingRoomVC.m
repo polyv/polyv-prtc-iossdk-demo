@@ -111,6 +111,8 @@ static NSString *roomCellId = @"roomCellId";
         NSLog(@"初始化errorCode：%d",errorCode);
     }];
     
+    NSLog(@"--%@ --", [PRTCEngine currentVersion]);
+    
     //获取配置页面信息 配置引擎
      NSDictionary *settingDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"setting"];
     if (settingDic == nil) {
