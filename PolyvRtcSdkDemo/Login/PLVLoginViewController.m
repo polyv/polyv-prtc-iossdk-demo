@@ -14,12 +14,11 @@
 
 #import <PRTCSDK_iOS/PRTCSDK_iOS.h>
 
+//账号配置
 #error [获取帐号配置信息 APPID APPKEY]
 
-//线上
 #define APP_ID @""
 #define APP_KEY @""
-
 
 #define TOKEN @""
 #import <AVFoundation/AVFoundation.h>

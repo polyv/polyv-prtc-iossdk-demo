@@ -7,7 +7,7 @@ target 'PolyvRtcSdkDemo' do
   use_frameworks!
 
   # Pods for PolyvRtcSdkDemo
-  pod 'PRTCSDK_iOS', '~>1.8.0.1'
+  pod 'PRTCSDK_iOS', '~>1.8.0.2'
 
   target 'PolyvRtcSdkDemoTests' do
     inherit! :search_paths

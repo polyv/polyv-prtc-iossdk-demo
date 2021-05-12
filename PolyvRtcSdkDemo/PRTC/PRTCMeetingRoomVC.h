@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PRTCMeetingRoomVC : UIViewController
 
-@property (nonatomic,strong) NSDictionary *engineSetting;//SDK相关配置信息
+@property (nonatomic, strong) NSDictionary *engineSetting;//SDK相关配置信息
 @property (nonatomic, strong) NSString *roomId;
 @property (nonatomic, strong) NSString *appId;
 @property (nonatomic, strong) NSString *appKey;

@@ -34,7 +34,6 @@
 		04D508592648DE9100BB9181 /* PRTCRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D508582648DE9100BB9181 /* PRTCRoomCell.m */; };
 		04D5085E2648DEF800BB9181 /* PRTCRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D5085D2648DEF800BB9181 /* PRTCRoomCell.xib */; };
 		04D508652648DF3C00BB9181 /* test480.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04D508632648DF3C00BB9181 /* test480.mp4 */; };
-		04D508662648DF3C00BB9181 /* dy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04D508642648DF3C00BB9181 /* dy.mp3 */; };
 		04D508782648F7F900BB9181 /* PRTCNativeRecordMediaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D508772648F7F900BB9181 /* PRTCNativeRecordMediaVC.m */; };
 		A4BDB07433A94B51B179D886 /* Pods_PolyvRtcSdkDemo_PolyvRtcSdkDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030406286751A2C36279BA72 /* Pods_PolyvRtcSdkDemo_PolyvRtcSdkDemoUITests.framework */; };
 		B5208F1EBC5C00085B5E7BC8 /* Pods_PolyvRtcSdkDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97439FE38B0CCBC77DDA120 /* Pods_PolyvRtcSdkDemo.framework */; };
@@ -122,7 +121,6 @@
 		04D508582648DE9100BB9181 /* PRTCRoomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRTCRoomCell.m; sourceTree = "<group>"; };
 		04D5085D2648DEF800BB9181 /* PRTCRoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRTCRoomCell.xib; sourceTree = "<group>"; };
 		04D508632648DF3C00BB9181 /* test480.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test480.mp4; sourceTree = "<group>"; };
-		04D508642648DF3C00BB9181 /* dy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dy.mp3; sourceTree = "<group>"; };
 		04D508762648F7F900BB9181 /* PRTCNativeRecordMediaVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRTCNativeRecordMediaVC.h; sourceTree = "<group>"; };
 		04D508772648F7F900BB9181 /* PRTCNativeRecordMediaVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRTCNativeRecordMediaVC.m; sourceTree = "<group>"; };
 		0C600AC01A0A032E2FDBD908 /* Pods-PolyvRtcSdkDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyvRtcSdkDemoTests.release.xcconfig"; path = "Target Support Files/Pods-PolyvRtcSdkDemoTests/Pods-PolyvRtcSdkDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -305,7 +303,6 @@
 		04D508622648DF1A00BB9181 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				04D508642648DF3C00BB9181 /* dy.mp3 */,
 				04D508632648DF3C00BB9181 /* test480.mp4 */,
 			);
 			path = Resource;
@@ -446,7 +443,6 @@
 				04D5085E2648DEF800BB9181 /* PRTCRoomCell.xib in Resources */,
 				0465D4FB26492606004BEF3D /* PRTCNativeRecordMediaVC.xib in Resources */,
 				0465D510264A6443004BEF3D /* README.md in Resources */,
-				04D508662648DF3C00BB9181 /* dy.mp3 in Resources */,
 				04D507BC2648B8BE00BB9181 /* LaunchScreen.storyboard in Resources */,
 				04D508532648DE4C00BB9181 /* PRTCMeetingRoomVC.xib in Resources */,
 				04D507B92648B8BE00BB9181 /* Assets.xcassets in Resources */,
